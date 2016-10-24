@@ -1,0 +1,11 @@
+{
+  "name": "yanatra-chrome",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git"
+  },
+  "description": "An (alpha) chrome extension to record your actions into a Yanatra script.",
+  "devDependencies": {
+    "duo": "0.8.10"
+  }
+}

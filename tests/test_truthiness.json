@@ -1,0 +1,41 @@
+{
+    "sequence": [
+        "ignoreSync",
+        {
+            "expect": [
+                {
+                    "var": -1,
+                    "truthiness": true
+                },
+                {
+                    "var": 0,
+                    "truthiness": false
+                },
+                {
+                    "var": 1,
+                    "truthiness": true
+                },
+                {
+                    "number": 0,
+                    "truthiness": false
+                },
+                {
+                    "number": -1,
+                    "truthiness": true
+                },
+                {
+                    "number": 1,
+                    "truthiness": true
+                },
+                {
+                    "string": "",
+                    "truthiness": false
+                },
+                {
+                    "string": "value",
+                    "truthiness": true
+                }
+            ]
+        }
+    ]
+}

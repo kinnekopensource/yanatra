@@ -1,0 +1,11 @@
+{
+    "sequence": [
+        {
+            "run": [
+                "_subscripts/resolve/1",
+                "_subscripts/resolve/1/1",
+                "_subscripts/resolve/2/1"
+            ]
+        }
+    ]
+}

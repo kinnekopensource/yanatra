@@ -1,0 +1,33 @@
+{
+    "sequence": [
+        "ignoreSync",
+        {
+            "remember": {
+                "var": false,
+                "@": "test completed"
+            }
+        },
+        {
+            "run": {
+                "script": "_subscripts/randomly_expect_equality",
+                "skip_on_check_fail": true,
+                "context": {
+                    "custom print statement": "this line should not be printed out!"
+                }
+            }
+        },
+        {
+            "expect": {
+                "equal": [
+                    "@test completed@",
+                    false
+                ]
+            }
+        },
+        {
+            "log": "we skipped over the test with the failing check!"
+        }
+
+    ]
+}
+

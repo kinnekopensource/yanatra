@@ -1,0 +1,39 @@
+{
+    "comment": "child locators seem to be broken?",
+    "sequence":[
+        {
+            "goto": "https://docs.angularjs.org/api"
+        },
+        {
+            "type": {
+                "keys": "12345",
+                "model": "q"
+            }
+        },
+        {
+            "click": {
+                "attr": {
+                    "href": "api/ng/function/angular.element"
+                }
+            }
+        },
+        {
+            "goto": "https://docs.angularjs.org/api"
+        },
+        {
+            "click": {
+                "attr": {
+                    "ng-repeat": "navItem in navGroup.navItems"
+                },
+                "tagName": "li",
+                "child": {
+                    "attr": {
+                        "href": "api/ng/function/angular.element"
+                    }
+                }
+            },
+            "skip": true,
+            "comment": "this is broken"
+        }
+    ]
+}

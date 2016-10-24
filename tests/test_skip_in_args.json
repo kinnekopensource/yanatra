@@ -1,0 +1,24 @@
+{
+    "sequence": [
+        {
+            "click": "#123213123122",
+            "skip": true
+        },
+        {
+            "click": "#12312312",
+            "skip": true
+        },
+        {
+            "type": {
+                "css": "#33333333",
+                "keys": "233333"
+            },
+            "skip": true
+        },
+        {
+            "waitForElement": "#waitforelement",
+            "skip": true,
+            "retry": 2
+        }
+    ]
+}

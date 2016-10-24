@@ -1,0 +1,9 @@
+{
+    "sequence": [
+        {
+            "click": "#3332423",
+            "retry": 3,
+            "skip": true
+        }
+    ]
+}

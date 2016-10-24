@@ -1,0 +1,31 @@
+{
+  "name": "YANATRA",
+  "version": "2.1.1",
+  "manifest_version": 2,
+  "description": "A chrome extension to record your actions into a YANATRA script.",
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "tabs",
+    "activeTab",
+    "*://*/"
+  ],
+  "content_security_policy": "script-src 'self' https://*.segment.com https://*.mxpnl.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": "images/icon-black.png",
+    "default_title": "Yanatra"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "commands": {
+    "detect-screenshot": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+3"
+      },
+      "description": "Detect a screenshot",
+      "global": true
+    }
+  }
+}

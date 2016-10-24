@@ -1,0 +1,79 @@
+{
+    "comment": "Maybe substitutions were a bad idea...",
+    "context": {
+        "testvar": "cowsheepdog300",
+        "testvar1": "cowsheepdog30",
+        "rem_varname": "testvar",
+        "testvar2": "cowsheepdog",
+        "300": 300
+    },
+    "sequence": [
+        {
+            "remember": {
+                "var": "'cowsheepdog'+(100*3)",
+                "@": "#rem_varname#"
+            }
+        },
+        {
+            "log": "@#rem_varname#@"
+        },
+        {
+            "log": "@testvar@"
+        },
+        {
+            "expect": [
+                {
+                    "equal": [
+                        "#testvar#",
+                        "@#rem_varname#@"
+                    ]
+                },
+                {
+                    "equal": [
+                        "#testvar1#0",
+                        "@testvar@"
+                    ]
+                },
+                {
+                    "equal": [
+                        {
+                            "var": "'#testvar1#'+0"
+                        },
+                        {
+                            "var": "'@#rem_varname#@'"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "remember": [
+                {
+                    "var": "'cowsheepdog'",
+                    "@": "#rem_varname#"
+                },
+                {
+                    "var": "'#testvar2#'",
+                    "@": "testvar1"
+                }
+            ]
+        },
+        {
+            "expect": [
+                {
+                    "equal": [
+                        "@#rem_varname#@",
+                        "@testvar1@"
+                    ]
+                },
+                {
+                    "not": true,
+                    "equal": [
+                        "@#rem_varname#@#300#",
+                        "@testvar1@"
+                    ]
+                }
+            ]
+        }
+    ]
+}

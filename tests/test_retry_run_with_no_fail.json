@@ -1,0 +1,35 @@
+{
+    "sequence": [
+        "ignoreSync",
+        {
+            "run": {
+                "script": "_subscripts/randomly_expect_equality",
+                "retry": 1000,
+                "context": {
+                    "range": 10
+                }
+            }
+        },
+        {
+            "expect": {
+                "equal": [
+                    "@test completed@",
+                    true
+                ]
+            }
+        },
+        {
+            "log": "@test completed@ finally we are here"
+        },
+        {
+            "run": {
+                "script": "_subscripts/test_context",
+                "retry": 10
+            }
+        },
+        {
+            "log": "or are we?"
+        }
+    ]
+}
+

@@ -1,0 +1,49 @@
+{
+    "context": {
+        "range": 100000,
+        "custom print statement": "all checks in randomly_expect_equality passed"
+    },
+    "sequence": [
+        {
+            "check": {
+                "equal": [
+                    {
+                        "var": "Math.floor(Math.random() * 2)"
+                    },
+                    0
+                ]
+            }
+        },
+        {
+            "remember": {
+                "var": "'randomly'",
+                "@": "me"
+            }
+        },
+        {
+            "run": { "script": "./randomly_expect_equality_1"  }
+        },
+        {
+            "check": {
+                "equal": [
+                    {
+                        "var": "Math.floor(Math.random() * #range#)"
+                    },
+                    3
+                ]
+            }
+        },
+        {
+            "log": "#custom print statement#"
+        },
+        {
+            "remember": {
+                "var": true,
+                "@": "test completed"
+            }
+        },
+        {
+            "log": "outer check succeeded!"
+        }
+    ]
+}

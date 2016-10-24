@@ -1,0 +1,30 @@
+{
+    "context": {
+        "a": 10,
+        "b": "Eugene",
+        "c": "cow"
+    },
+    "sequence": [
+        {
+            "expect": [
+                {
+                    "equal": ["#a#", 10]
+                },
+                {
+                    "equal": ["#a#", 10000],
+                    "not": true
+                },
+                {
+                    "equal": ["#a#", "10"],
+                    "not": true
+                },
+                {
+                    "equal": ["#b#", "Eugene"]
+                }
+            ]
+        },
+        {
+            "log": "tested basic context expectations"
+        }
+    ]
+}

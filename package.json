@@ -1,0 +1,50 @@
+{
+  "name": "yanatra",
+  "version": "0.0.1",
+  "main": "index.js",
+  "engines": {
+    "node": "4.2.2"
+  },
+  "author": "timchambers",
+  "license": "ISC",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "chalk": "^1.1.3",
+    "chromedriver": "^2.20.0",
+    "clarinet": "^0.11.0",
+    "del": "^2.2.0",
+    "expand-tilde": "^1.2.2",
+    "fs-extra": "^0.30.0",
+    "grunt": "^0.4.5",
+    "gulp": "^3.8.10",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.4.3",
+    "gulp-concat-util": "^0.5.4",
+    "gulp-protractor": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-tap": "^0.1.3",
+    "jasmine-reporters": "^2.2.0",
+    "jasmine-spec-reporter": "^2.4.0",
+    "jasmine2-custom-message": "^0.8.0",
+    "mkdirp": "^0.5.1",
+    "node-stringify": "0.0.19",
+    "oboe": "^2.1.2",
+    "open": "0.0.5",
+    "os-tmpdir": "^1.0.1",
+    "protractor": "^3.0.0",
+    "protractor-fail-fast": "^2.0.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.3.1",
+    "proquery": "2.0.0",
+    "run-sequence": "^1.1.5",
+    "yargs": "^3.31.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "bin": {
+    "yanatra": "./index.js"
+  },
+  "scripts": {
+    "docs": "jsdoc2md src/actions/**/*.js > ./docs/actions/general.md; jsdoc2md src/actions/**/**/*.js > ./docs/actions/expectations.md;  jsdoc2md src/lib/**/*.js > ./docs/lib.md;"
+  }
+}
