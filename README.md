@@ -47,13 +47,13 @@ Arguments can be strings, numbers, objects, depending on what the action accepts
 	{
 	   "sequence": [
 	      {
-		 "click": "#someButtonId"
+		     "click": "#someButtonId"
 	      },
 	      {
-		 "type": {
-		    "keys": "one of the best.",
-		    "css": "#allen"
-		 }
+             "type": {
+                "keys": "one of the best.",
+                "css": "#allen"
+             }
 	      }
 	   ]
 	}
@@ -84,7 +84,7 @@ $ brew cask install java
 Once you have the latest JRE, install yanatra globally:
 
 ```sh
-$ sudo npm install -g yanatra
+$ npm install -g yanatra
 ```
 
 Finally, get the latest Selenium jars and Chrome drivers:
@@ -93,7 +93,18 @@ Finally, get the latest Selenium jars and Chrome drivers:
 $ yanatra update
 ```
 
-You will now be able to use yanatra in any directory on your system.
+You will now be able to use yanatra in any directory on your system. 
+
+To start using some sample tests, go to or make an empty directory. In that directory, issue the command:
+```sh
+$ yanatra init
+```
+
+You can then run those tests in your newly filled directory with the command:
+```sh
+$ yanatra run
+```
+
 
 ### Running scripts
 
@@ -102,12 +113,12 @@ a yanatra.js file is in the directory.
 
 To run a specific json:
 ```sh
-yanatra run relative/or/absolute/path/to/your/script.json
+$ yanatra run relative/or/absolute/path/to/your/script.json
 ```
 
 Or to run all valid json in a directory:
 ```sh
-yanatra run relative/or/absolute/path/
+$ yanatra run relative/or/absolute/path/
 ```
 
 If no yanatra file is specified, yanatra will use the command line arguments you pass in, followed by the default configuration.
@@ -158,7 +169,7 @@ or explicitly as:
 You can view all the loaded actions, including your custom ones, by entering this command in console:
 
 ```sh
-yanatra debug actions
+$ yanatra debug actions
 ```
 
 For more on actions and their specific syntax, check out the [actions api](docs/actions/general.md)
@@ -266,7 +277,7 @@ To indicate that you want to substitute a value from the context into a string, 
         {
             "type": {
 
-                "name": "#buttonName#",
+                "name": "#inputName#",
                 "keys": "#inputValue#"
             }
         },
@@ -411,7 +422,7 @@ You and others who have access to this dir will now get those two options automa
 
 To get started, go to an empty dir of your choosing and enter in console:
  ```sh
- yanatra init
+ $ yanatra init
  ```
 
 This will copy a boilerplate yanatra config, actions, scripts and reports directory
@@ -420,7 +431,7 @@ into the current working directory.
 You can specify a custom template to copy in `example/` by issuing
 
 ```sh
-yanatra init [template_name_directory_here]
+$ yanatra init [template_name_directory_here]
 ```
 
 #### Custom Actions
@@ -447,8 +458,6 @@ If you were to override it with action named ```init``` in your custom actions m
 If we wanted every spec to (re)start at the root of our website:
 
 ```js
-
-
     module.exports = {
         init() {
             return browser.get("/")
@@ -604,7 +613,7 @@ Optional, very alpha, fork of daylight (https://github.com/segmentio/daydream).
 
 Yanatra-Chrome records your browser actions as yanatra actions.
 
-This will likely be placed into its own repository since there is no shared code between it and yanatra Node.
+This will likely be placed into its own repository since there is no shared code between it and yanatra, the nodejs test runner.
 
 ## Project
 
