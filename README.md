@@ -42,7 +42,7 @@ yanatra scripts standardize these informal tests in two important ways.
 1. __Readability__
 A script is JSON array of objects. First attribute defines the action and the argument to
 be passed into into that action.
-Arguments can be strings, numbers, objects, depending on what the action accepts. [1]
+Arguments can be strings, numbers, objects, depending on what the action accepts.
 	```js
 	{
 	   "sequence": [
@@ -63,7 +63,7 @@ Arguments can be strings, numbers, objects, depending on what the action accepts
 yanatra, on the other hand, limits the kinds of browser actions that can be be performed and how they are performed.
 For the most part your tests will do one action after another, after another, and fail if an action cannot be performed.
 
-yanatra scripts compile into normal JS Protractor tests, which automatically includes workaround some of Selenium's edge cases.' [2]
+yanatra scripts compile into normal JS Protractor tests, which automatically includes workaround some of Selenium's edge cases.1
 
 [1] yanatra aims to reduce barrier-to-entry for test creation and maintenance.
 

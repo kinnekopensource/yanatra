@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  *  ====================
- *  YANATRA V0.0.2 ALPHA
+ *  YANATRA V0.0.3 ALPHA
  *  ====================
  *
  *  Run e2e tests with JSON.
