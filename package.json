@@ -7,6 +7,14 @@
   },
   "author": "timchambers",
   "license": "ISC",
+  "homepage": "https://github.com/kinnekopensource/yanatra",
+  "bugs": {
+    "url": "https://github.com/kinnekopensource/yanatra/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kinnekopensource/yanatra.git"
+  },
   "dependencies": {
     "callsite": "^1.0.0",
     "chalk": "^1.1.3",
